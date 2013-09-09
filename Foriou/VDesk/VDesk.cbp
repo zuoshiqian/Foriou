@@ -8,8 +8,8 @@
 		<Option virtualFolders="Plugin\;Imp\;Util\;" />
 		<Build>
 			<Target title="Debug">
-				<Option output="C:/Users/Zhiep/Documents/GitHub/Innovation/App/Debug/Exe/VDesk" prefix_auto="1" extension_auto="1" />
-				<Option object_output="C:/Users/Zhiep/Documents/GitHub/Innovation/App/Release/Obj/" />
+				<Option output="C:/Users/Zhiep/Documents/GitHub/Foriou/App/Debug/Exe/VDesk" prefix_auto="1" extension_auto="1" />
+				<Option object_output="C:/Users/Zhiep/Documents/GitHub/Foriou/App/Release/Obj/" />
 				<Option type="3" />
 				<Option compiler="msvc10" />
 				<Compiler>
@@ -20,15 +20,15 @@
 				</Compiler>
 				<Linker>
 					<Add option="/INCREMENTAL:NO" />
-					<Add library="C:\Users\Zhiep\Documents\GitHub\Innovation\Foriou\DirectUI\Project\Common\Static_Debug_2012\UiLib_d.lib" />
+					<Add library="C:\Users\Zhiep\Documents\GitHub\Foriou\Foriou\DirectUI\Project\Common\Static_Debug_2012\UiLib_d.lib" />
 				</Linker>
 				<ExtraCommands>
-					<Add after='mt.exe /nologo /manifest &quot;C:\Users\Zhiep\Documents\GitHub\Innovation\App\Debug\Exe\VDesk.dll.manifest&quot; /outputresource:&quot;C:\Users\Zhiep\Documents\GitHub\Innovation\App\Debug\Exe\VDesk.dll&quot;;2' />
+					<Add after='mt.exe /nologo /manifest &quot;C:\Users\Zhiep\Documents\GitHub\Foriou\App\Debug\Exe\VDesk.dll.manifest&quot; /outputresource:&quot;C:\Users\Zhiep\Documents\GitHub\Foriou\App\Debug\Exe\VDesk.dll&quot;;2' />
 				</ExtraCommands>
 			</Target>
 			<Target title="Release">
-				<Option output="C:/Users/Zhiep/Documents/GitHub/Innovation/App/Release/Exe/VDesk" prefix_auto="1" extension_auto="1" />
-				<Option object_output="C:/Users/Zhiep/Documents/GitHub/Innovation/App/Release/Obj/" />
+				<Option output="C:/Users/Zhiep/Documents/GitHub/Foriou/App/Release/Exe/VDesk" prefix_auto="1" extension_auto="1" />
+				<Option object_output="C:/Users/Zhiep/Documents/GitHub/Foriou/App/Release/Obj/" />
 				<Option type="3" />
 				<Option compiler="msvc10" />
 				<Option createDefFile="1" />
@@ -42,10 +42,10 @@
 				<Linker>
 					<Add option="/INCREMENTAL:NO" />
 					<Add library="user32" />
-					<Add library="C:\Users\Zhiep\Documents\GitHub\Innovation\Foriou\DirectUI\Project\UiLib\UiLib.lib" />
+					<Add library="C:\Users\Zhiep\Documents\GitHub\Foriou\Foriou\DirectUI\Project\UiLib\UiLib.lib" />
 				</Linker>
 				<ExtraCommands>
-					<Add after='mt.exe /nologo /manifest &quot;C:\Users\Zhiep\Documents\GitHub\Innovation\App\Release\Exe\VDesk.dll.manifest&quot; /outputresource:&quot;C:\Users\Zhiep\Documents\GitHub\Innovation\App\Release\Exe\VDesk.dll&quot;;2' />
+					<Add after='mt.exe /nologo /manifest &quot;C:\Users\Zhiep\Documents\GitHub\Foriou\App\Release\Exe\VDesk.dll.manifest&quot; /outputresource:&quot;C:\Users\Zhiep\Documents\GitHub\Foriou\App\Release\Exe\VDesk.dll&quot;;2' />
 				</ExtraCommands>
 			</Target>
 		</Build>
@@ -59,7 +59,7 @@
 			<Add option="/D_WINDOWS" />
 			<Add option="/DFY_PLUGIN_EXPORTS" />
 			<Add directory="$(#psdk.include)" />
-			<Add directory="C:/Users/Zhiep/Documents/GitHub/Innovation/Foriou/" />
+			<Add directory="C:/Users/Zhiep/Documents/GitHub/Foriou/Foriou/" />
 		</Compiler>
 		<Linker>
 			<Add library="gdi32" />

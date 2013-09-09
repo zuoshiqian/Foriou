@@ -8,9 +8,9 @@
 		<Option virtualFolders="Plugin\;Core\;Shell\;Util\;Shell\Shell_imp\;Shell\Main_win\;Shell\Dialog\;" />
 		<Build>
 			<Target title="Debug">
-				<Option output="C:/Users/Zhiep/Documents/GitHub/Innovation/App/Debug/Exe/Foriou" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="C:/Users/Zhiep/Documents/GitHub/Innovation/App/Debug/Exe/" />
-				<Option object_output="C:/Users/Zhiep/Documents/GitHub/Innovation/App/Debug/Obj/" />
+				<Option output="C:/Users/Zhiep/Documents/GitHub/Foriou/App/Debug/Exe/Foriou" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="C:/Users/Zhiep/Documents/GitHub/Foriou/App/Debug/Exe/" />
+				<Option object_output="C:/Users/Zhiep/Documents/GitHub/Foriou/App/Debug/Obj/" />
 				<Option type="0" />
 				<Option compiler="msvc10" />
 				<Compiler>
@@ -18,13 +18,13 @@
 					<Add option="/D_DEBUG" />
 				</Compiler>
 				<Linker>
-					<Add library="C:\Users\Zhiep\Documents\GitHub\Innovation\Foriou\DirectUI\Project\Common\Static_Debug_2012\UiLib_d.lib" />
+					<Add library="C:\Users\Zhiep\Documents\GitHub\Foriou\Foriou\DirectUI\Project\Common\Static_Debug_2012\UiLib_d.lib" />
 				</Linker>
 			</Target>
 			<Target title="Release">
-				<Option output="C:/Users/Zhiep/Documents/GitHub/Innovation/App/Release/Exe/Foriou" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="C:/Users/Zhiep/Documents/GitHub/Innovation/App/Release/Exe/" />
-				<Option object_output="C:/Users/Zhiep/Documents/GitHub/Innovation/App/Release/Obj/" />
+				<Option output="C:/Users/Zhiep/Documents/GitHub/Foriou/App/Release/Exe/Foriou" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="C:/Users/Zhiep/Documents/GitHub/Foriou/App/Release/Exe/" />
+				<Option object_output="C:/Users/Zhiep/Documents/GitHub/Foriou/App/Release/Obj/" />
 				<Option type="0" />
 				<Option compiler="msvc10" />
 				<Compiler>
@@ -34,7 +34,7 @@
 					<Add option="/DNDEBUG" />
 				</Compiler>
 				<Linker>
-					<Add library="C:\Users\Zhiep\Documents\GitHub\Innovation\Foriou\DirectUI\Project\UiLib\UiLib.lib" />
+					<Add library="C:\Users\Zhiep\Documents\GitHub\Foriou\Foriou\DirectUI\Project\UiLib\UiLib.lib" />
 				</Linker>
 			</Target>
 		</Build>
@@ -47,7 +47,7 @@
 			<Add option="/DWINDOWS" />
 			<Add option="/D_WINDOWS" />
 			<Add directory="$(#psdk.include)" />
-			<Add directory="C:/Users/Zhiep/Documents/GitHub/Innovation/Foriou/" />
+			<Add directory="C:/Users/Zhiep/Documents/GitHub/Foriou/Foriou/" />
 		</Compiler>
 		<Linker>
 			<Add library="gdi32" />
