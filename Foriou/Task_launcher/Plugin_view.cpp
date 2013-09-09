@@ -200,8 +200,8 @@ void Plugin_view::update(Task_scheduler* ts)
     assert(ts && list_);
 
     if (ts->size() == list_->GetCount() && ts->size() == 0) return;
-
     assert(ts->size() != list_->GetCount());
+
     list_->RemoveAll();
     for (auto& task: *ts) {
         auto item = new CListTextElementUI;

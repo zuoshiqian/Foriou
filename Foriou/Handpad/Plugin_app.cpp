@@ -30,7 +30,7 @@ const std::wstring& Plugin_app::name()
 }
 
 bool Plugin_app::load()
-{
+try {
     this->log(trace, L"Load");
 
     using namespace std::placeholders;
@@ -40,6 +40,11 @@ bool Plugin_app::load()
 
     return *view_ != NULL;
 }
+catch (std::exception& e) {
+    ::MessageBoxA(NULL, e.what(), "Handpad Error", MB_OK | MB_ICONERROR);
+    return false;
+}
+
 
 void Plugin_app::unload()
 {

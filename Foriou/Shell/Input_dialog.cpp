@@ -23,7 +23,7 @@ boost::optional<std::wstring>
     return ret;
 }
 
-void Input_dialog::Notify(TNotifyUI& notifier)
+void Input_dialog::Notify(TNotifyUI& msg)
 {
     if (msg.sType == L"click") {
         auto sender = msg.pSender;
@@ -36,7 +36,7 @@ void Input_dialog::Notify(TNotifyUI& notifier)
         }
     }
 
-    Timed_dialog::Notify(notifier);
+    Timed_dialog::Notify(msg);
 }
 
 }} // of namespace Foriou::Detail

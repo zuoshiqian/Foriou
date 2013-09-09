@@ -31,7 +31,7 @@ LRESULT Timed_dialog::HandleMessage(UINT uMsg, WPARAM wpm, LPARAM lpm)
     return Win_base::HandleMessage(uMsg, wpm, lpm);
 }
 
-CControlUI* Plugin_view::Init()
+CControlUI* Timed_dialog::Init()
 {
     CDialogBuilder builder;
     auto root = builder.Create(_Xml.c_str(), 0, nullptr, &this->GetManager());
@@ -53,9 +53,9 @@ void Timed_dialog::Notify(TNotifyUI& msg)
     }
 }
 
-UINT Timed_dialog::ShowModal(int timeout_second)
+UINT Timed_dialog::ShowModalImp(int timeout_second)
 {
-    if (timeout_second <== 0) return 0;
+    if (timeout_second <= 0) return 0;
 
     _Timeout_second = timeout_second;
     _Elapse_second = 0;

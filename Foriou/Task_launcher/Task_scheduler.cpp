@@ -77,14 +77,19 @@ std::unique_ptr<Task_scheduler> Task_scheduler::inst_;
 
 Task_scheduler* Task_scheduler::get()
 {
+    return inst_? inst_.get(): nullptr;
+}
+
+Task_scheduler* Task_scheduler::create(const std::wstring& data_file)
+{
     if (!inst_) {
-        inst_.reset(new Task_scheduler);
+        inst_.reset(new Task_scheduler(data_file));
     }
     return inst_.get();
 }
 
-Task_scheduler::Task_scheduler()
-    : is_ok_(), view_(), saver_(Detail::task_saver)
+Task_scheduler::Task_scheduler(const std::wstring& data_file)
+    : is_ok_(), view_(), saver_(data_file)
 {
     try {
         throw_if_failed(::CoInitialize(nullptr));
@@ -154,10 +159,10 @@ void Task_scheduler::create_task(const Task& t)
     Error::check_error_code(ec);
 }
 
+//! \todo   fix this: backend may contain items which were not
+//!         serialized.
 void Task_scheduler::synchronize_sys_()
 {
-    if (tasks_.empty()) return;
-
     CComPtr<IRegisteredTaskCollection> tasks;
     throw_if_failed(folder_->GetTasks(0, &tasks));
 
@@ -165,7 +170,6 @@ void Task_scheduler::synchronize_sys_()
     throw_if_failed(tasks->get_Count(&count));
 
     if (count == tasks_.size()) return;
-    assert(count < tasks_.size());
 
     dirty_.dirt();
 
@@ -300,6 +304,8 @@ const Task* Task_scheduler::get_task(const std::wstring& name)
 //---------------------------------------------------------------------------------
 namespace Detail {
 
+//! \todo   fix these: wrong serialization and deserialization.
+//! @{
 Task_saver::Task_vec Task_saver::get()
 {
     std::wifstream ifs(Detail::task_saver);
@@ -308,15 +314,17 @@ Task_saver::Task_vec Task_saver::get()
         boost::archive::text_wiarchive in(ifs);
         in >> vec;
     }
+    //! \bug    always return empty vec.
     return vec;
 }
 
 void Task_saver::put(const Task_saver::Task_vec& v)
 {
-    std::wofstream ofs(Detail::task_saver);
+    std::wofstream ofs(file_);
     boost::archive::text_woarchive out(ofs);
     out << v;
 }
+//! @}
 
 }  // of namespace Detail
 }  // of namespace Foriou

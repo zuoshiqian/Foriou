@@ -1,3 +1,4 @@
+#include "Core/App_config.h"
 #include "Task_launcher/Plugin_app.h"
 #include "Task_launcher/Plugin_view.h"
 #include "Task_launcher/Task_scheduler.h"
@@ -40,7 +41,8 @@ bool Plugin_app::load()
     view_->Create();
     if (*view_ == NULL) view_.reset();
 
-    return *view_ != NULL && Task_scheduler::get()->is_usable();
+    auto data_file = App_config::Path::data_resource + std::wstring(L"task_scheduler.dat");
+    return *view_ != NULL && Task_scheduler::create(data_file);
 }
 
 void Plugin_app::unload()

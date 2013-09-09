@@ -345,3 +345,370 @@
 	<string>
 	"Core/Log.h"
 
+1378701036 source:c:\users\zhiep\documents\github\foriou\foriou\shell\detail\shell_imp.cpp
+	"Shell/Detail/Shell_imp.h"
+	"Core/Log.h"
+	<boost/property_tree/ptree.hpp>
+	<boost/property_tree/xml_parser.hpp>
+
+1378700891 c:\users\zhiep\documents\github\foriou\foriou\\shell\detail\shell_imp.h
+	"Shell/Shell.h"
+	"Util/Utility.h"
+	"Util/Animator.h"
+	"Shell/Main_win.h"
+	<memory>
+	<map>
+	<vector>
+	<windows.h>
+	<gdiplus.h>
+
+1378370724 c:\users\zhiep\documents\github\foriou\foriou\\shell\shell.h
+	<memory>
+	<string>
+	<boost/optional.hpp>
+	"Util/Utility.h"
+	"Core/IPlugin.h"
+
+1375785555 c:\users\zhiep\documents\github\foriou\foriou\\util\utility.h
+	<windows.h>
+	<functional>
+	<map>
+	<cassert>
+
+1378261317 c:\users\zhiep\documents\github\foriou\foriou\\core\iplugin.h
+	<Windows.h>
+	<string>
+
+1375628061 c:\users\zhiep\documents\github\foriou\foriou\\util\animator.h
+	<functional>
+	<map>
+	<stdexcept>
+	<string>
+
+1378291299 c:\users\zhiep\documents\github\foriou\foriou\\shell\main_win.h
+	"Util/Win_base.h"
+
+1378291523 c:\users\zhiep\documents\github\foriou\foriou\\util\win_base.h
+	"Core/IPlugin.h"
+	"DirectUI/UiLib.h"
+	"Util/Utility.h"
+	<functional>
+	<boost/preprocessor/wstringize.hpp>
+
+1356078259 c:\users\zhiep\documents\github\foriou\foriou\\directui\uilib.h
+	<windows.h>
+	<windowsx.h>
+	<commctrl.h>
+	<stddef.h>
+	<richedit.h>
+	<tchar.h>
+	<assert.h>
+	<crtdbg.h>
+	<malloc.h>
+	<atlbase.h>
+	<atlstr.h>
+	<xstring>
+	"Utils/DuiPointer.h"
+	"Utils/Utils.h"
+	"Utils/Internal.h"
+	"Utils/UIDelegate.h"
+	"Utils/DuiAutoComplete.h"
+	"Utils/DuiTrayIcon.h"
+	"Core/UITimer.h"
+	"Core/UIDefine.h"
+	"Core/UIBase.h"
+	"Core/UIManager.h"
+	"Core/UIDxAnimation.h"
+	"Core/UIControl.h"
+	"Core/UIContainer.h"
+	"Core/UIMarkup.h"
+	"Core/UIDlgBuilder.h"
+	"Core/UIRender.h"
+	"Layout/UIVerticalLayout.h"
+	"Layout/UIHorizontalLayout.h"
+	"Layout/UITileLayout.h"
+	"Layout/UITabLayout.h"
+	"Layout/UIChildLayout.h"
+	"Control/UIList.h"
+	"Control/UICombo.h"
+	"Control/UIScrollBar.h"
+	"Control/UITreeView.h"
+	"Control/UIChartView.h"
+	"Control/UILabel.h"
+	"Control/UIText.h"
+	"Control/UIEdit.h"
+	"Control/UIGifAnim.h"
+	<vector>
+	<algorithm>
+	"Control/UIAnimation.h"
+	"Control/UIFadeButton.h"
+	"Control/UIButton.h"
+	"Control/UIOption.h"
+	"Control/UICheckBox.h"
+	"Control/UIRadioBox.h"
+	"Control/UIProgress.h"
+	"Control/UISlider.h"
+	"Control/UIComboBox.h"
+	"Control/UIRichEdit.h"
+	"Control/UICalendar.h"
+	"Control/UIActiveX.h"
+	"Control/UIWebBrowser.h"
+	"Control/UIFlash.h"
+	"Utils/WinImplBase.h"
+	"Utils/IWindowBase.h"
+
+1353665685 c:\users\zhiep\documents\github\foriou\foriou\\directui\utils\duipointer.h
+
+1355904750 c:\users\zhiep\documents\github\foriou\foriou\\directui\utils\utils.h
+
+1353567476 c:\users\zhiep\documents\github\foriou\foriou\\directui\utils\internal.h
+	<d3d9.h>
+	<math.h>
+	"../Core/UIDxAnimation.h"
+
+1353567481 c:\users\zhiep\documents\github\foriou\foriou\\directui\core\uidxanimation.h
+
+1356057802 c:\users\zhiep\documents\github\foriou\foriou\\directui\utils\uidelegate.h
+
+1356070578 c:\users\zhiep\documents\github\foriou\foriou\\directui\utils\duiautocomplete.h
+	<initguid.h>
+	<shldisp.h>
+	<shlguid.h>
+
+1356075855 c:\users\zhiep\documents\github\foriou\foriou\\directui\utils\duitrayicon.h
+	<ShellAPI.h>
+
+1356069152 c:\users\zhiep\documents\github\foriou\foriou\\directui\core\uitimer.h
+
+1353815498 c:\users\zhiep\documents\github\foriou\foriou\\directui\core\uidefine.h
+
+1354787481 c:\users\zhiep\documents\github\foriou\foriou\\directui\core\uibase.h
+
+1356073686 c:\users\zhiep\documents\github\foriou\foriou\\directui\core\uimanager.h
+	<gdiplus.h>
+
+1355369238 c:\users\zhiep\documents\github\foriou\foriou\\directui\core\uicontrol.h
+	"Utils/DuiReflection.h"
+
+1353567481 c:\users\zhiep\documents\github\foriou\foriou\\directui\core\uicontainer.h
+
+1353567480 c:\users\zhiep\documents\github\foriou\foriou\\directui\core\uimarkup.h
+
+1353567481 c:\users\zhiep\documents\github\foriou\foriou\\directui\core\uidlgbuilder.h
+
+1353567481 c:\users\zhiep\documents\github\foriou\foriou\\directui\core\uirender.h
+
+1353567482 c:\users\zhiep\documents\github\foriou\foriou\\directui\layout\uiverticallayout.h
+
+1353567482 c:\users\zhiep\documents\github\foriou\foriou\\directui\layout\uihorizontallayout.h
+
+1353994684 c:\users\zhiep\documents\github\foriou\foriou\\directui\layout\uitilelayout.h
+
+1353567482 c:\users\zhiep\documents\github\foriou\foriou\\directui\layout\uitablayout.h
+
+1353567482 c:\users\zhiep\documents\github\foriou\foriou\\directui\layout\uichildlayout.h
+
+1354511634 c:\users\zhiep\documents\github\foriou\foriou\\directui\control\uilist.h
+	"Layout/UIVerticalLayout.h"
+	"Layout/UIHorizontalLayout.h"
+
+1353567479 c:\users\zhiep\documents\github\foriou\foriou\\directui\control\uicombo.h
+
+1353567479 c:\users\zhiep\documents\github\foriou\foriou\\directui\control\uiscrollbar.h
+
+1354774559 c:\users\zhiep\documents\github\foriou\foriou\\directui\control\uitreeview.h
+	<vector>
+
+1353567478 c:\users\zhiep\documents\github\foriou\foriou\\directui\control\uichartview.h
+
+1353914205 c:\users\zhiep\documents\github\foriou\foriou\\directui\control\uilabel.h
+	<GdiPlus.h>
+
+1353567479 c:\users\zhiep\documents\github\foriou\foriou\\directui\control\uitext.h
+
+1355904335 c:\users\zhiep\documents\github\foriou\foriou\\directui\control\uiedit.h
+
+1353567478 c:\users\zhiep\documents\github\foriou\foriou\\directui\control\uigifanim.h
+	<gdiplus.h>
+
+1353567479 c:\users\zhiep\documents\github\foriou\foriou\\directui\control\uianimation.h
+	"UIButton.h"
+
+1354000118 c:\users\zhiep\documents\github\foriou\foriou\\directui\control\uibutton.h
+
+1353567479 c:\users\zhiep\documents\github\foriou\foriou\\directui\control\uifadebutton.h
+	"UIAnimation.h"
+
+1353567478 c:\users\zhiep\documents\github\foriou\foriou\\directui\control\uioption.h
+
+1353567479 c:\users\zhiep\documents\github\foriou\foriou\\directui\control\uicheckbox.h
+
+1353567479 c:\users\zhiep\documents\github\foriou\foriou\\directui\control\uiradiobox.h
+
+1353567479 c:\users\zhiep\documents\github\foriou\foriou\\directui\control\uiprogress.h
+
+1353567478 c:\users\zhiep\documents\github\foriou\foriou\\directui\control\uislider.h
+
+1353567479 c:\users\zhiep\documents\github\foriou\foriou\\directui\control\uicombobox.h
+
+1353567478 c:\users\zhiep\documents\github\foriou\foriou\\directui\control\uirichedit.h
+
+1354004811 c:\users\zhiep\documents\github\foriou\foriou\\directui\control\uicalendar.h
+	<map>
+
+1353567479 c:\users\zhiep\documents\github\foriou\foriou\\directui\control\uiactivex.h
+
+1353567479 c:\users\zhiep\documents\github\foriou\foriou\\directui\control\uiwebbrowser.h
+	"Utils/WebBrowserEventHandler.h"
+	<ExDisp.h>
+
+1356078070 c:\users\zhiep\documents\github\foriou\foriou\\directui\control\uiflash.h
+	"Utils/FlashEventHandler.h"
+	"Utils/flash11.tlh"
+
+1375664588 c:\users\zhiep\documents\github\foriou\foriou\\directui\utils\winimplbase.h
+
+1356069794 c:\users\zhiep\documents\github\foriou\foriou\\directui\utils\iwindowbase.h
+	"WinImplBase.h"
+
+1378296755 c:\users\zhiep\documents\github\foriou\foriou\\core\log.h
+	<cassert>
+	<utility>
+	<boost/log/trivial.hpp>
+	<boost/log/core.hpp>
+	<boost/log/utility/setup.hpp>
+	<boost/log/sinks.hpp>
+	<boost/log/expressions.hpp>
+
+1378291271 source:c:\users\zhiep\documents\github\foriou\foriou\shell\main_win.cpp
+	"Shell/Main_win.h"
+	"Shell/Detail/Shell_imp.h"
+
+1378199105 source:c:\users\zhiep\documents\github\foriou\foriou\util\animator.cpp
+	"Util/Animator.h"
+	<cassert>
+	<queue>
+	<chrono>
+	<windows.h>
+	<iostream>
+
+1375794557 source:c:\users\zhiep\documents\github\foriou\foriou\util\utility.cpp
+	"Util/Utility.h"
+	<cassert>
+	<iostream>
+
+1378287808 source:c:\users\zhiep\documents\github\foriou\foriou\util\win_base.cpp
+	"Util/Win_base.h"
+	<exception>
+
+1378271138 source:c:\users\zhiep\documents\github\foriou\foriou\core\error_handle.cpp
+	<exception>
+	<string>
+	<cstdlib>
+	<Windows.h>
+	"Core/Error_handle.h"
+	"Core/Log.h"
+	"Core/IPlugin.h"
+
+1378285464 c:\users\zhiep\documents\github\foriou\foriou\\core\error_handle.h
+	<exception>
+	<string>
+	"Core/Log.h"
+
+1375962661 source:c:\users\zhiep\documents\github\foriou\foriou\core\main.cpp
+	"Core/Core.h"
+
+1378700260 c:\users\zhiep\documents\github\foriou\foriou\\core\core.h
+	"Core/IPlugin.h"
+	"Core/Plugin_manager.h"
+	"Core/Tray_icon.h"
+	"Core/Menu.h"
+	"Shell/Shell.h"
+	"Util/Utility.h"
+	<memory>
+	<map>
+	<Windows.h>
+
+1375971174 c:\users\zhiep\documents\github\foriou\foriou\\core\plugin_manager.h
+	"Util/Utility.h"
+	"Core/IPlugin.h"
+	"Core/Plugin_loader.h"
+	<vector>
+	<string>
+
+1375969896 c:\users\zhiep\documents\github\foriou\foriou\\core\plugin_loader.h
+	"Core/IPlugin.h"
+
+1378213880 c:\users\zhiep\documents\github\foriou\foriou\\core\tray_icon.h
+	"Util/Utility.h"
+	<Windows.h>
+	<Shellapi.h>
+	<string>
+	<memory>
+
+1378293041 c:\users\zhiep\documents\github\foriou\foriou\\core\menu.h
+	"Util/Win_base.h"
+	<map>
+	<functional>
+
+1378297137 source:c:\users\zhiep\documents\github\foriou\foriou\core\menu.cpp
+	"Core/Menu.h"
+	<string>
+
+1375775397 source:c:\users\zhiep\documents\github\foriou\foriou\core\plugin_loader.cpp
+	"Core/Plugin_loader.h"
+	<stdexcept>
+
+1378709191 source:c:\users\zhiep\documents\github\foriou\foriou\core\plugin_manager.cpp
+	<algorithm>
+	<string>
+	<Windows.h>
+	"Plugin_manager.h"
+
+1375971174 c:\users\zhiep\documents\github\foriou\foriou\core\plugin_manager.h
+	"Util/Utility.h"
+	"Core/IPlugin.h"
+	"Core/Plugin_loader.h"
+	<vector>
+	<string>
+
+1378214038 source:c:\users\zhiep\documents\github\foriou\foriou\core\tray_icon.cpp
+	"Core/Tray_icon.h"
+	<cstring>
+	<cwchar>
+
+1378700562 source:c:\users\zhiep\documents\github\foriou\foriou\shell\input_dialog.cpp
+	"Shell/Input_dialog.h"
+
+1378374795 c:\users\zhiep\documents\github\foriou\foriou\\shell\input_dialog.h
+	<boost/optional.hpp>
+	"Shell/Timed_dialog.h"
+
+1378377017 c:\users\zhiep\documents\github\foriou\foriou\\shell\timed_dialog.h
+	"Util/Win_base.h"
+
+1378374386 source:c:\users\zhiep\documents\github\foriou\foriou\shell\notify_dialog.cpp
+
+1378374404 source:c:\users\zhiep\documents\github\foriou\foriou\shell\query_dialog.cpp
+
+1378370760 source:c:\users\zhiep\documents\github\foriou\foriou\shell\shell.cpp
+	"Shell/Detail/Shell_imp.h"
+
+1378700651 source:c:\users\zhiep\documents\github\foriou\foriou\shell\timed_dialog.cpp
+	"Shell/Timed_dialog.h"
+
+1378700742 source:c:\users\zhiep\documents\github\foriou\foriou\core\core.cpp
+	"Core/Core.h"
+	"Core/Log.h"
+	"Core/App_config.h"
+	"Core/Error_handle.h"
+	"Core/Common_def.h"
+	"Shell/Shell.h"
+	"Shell/Main_win.h"
+	"DirectUI/UiLib.h"
+	<locale>
+
+1378700328 c:\users\zhiep\documents\github\foriou\foriou\\core\app_config.h
+
+1378213317 c:\users\zhiep\documents\github\foriou\foriou\\core\common_def.h
+

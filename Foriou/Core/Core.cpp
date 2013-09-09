@@ -1,5 +1,6 @@
 #include "Core/Core.h"
 #include "Core/Log.h"
+#include "Core/App_config.h"
 #include "Core/Error_handle.h"
 #include "Core/Common_def.h"
 #include "Shell/Shell.h"
@@ -34,13 +35,6 @@ inline void do_log(Core*, Log_level level, String_type&& content)
     do_log(L"Core", level, std::forward<String_type>(content));
 }
 //! @}
-
-//! define some config info.
-namespace Config {
-
-auto log_file = "Foriou.log";
-
-}  // of namespace config
 
 //! check whether the program is normally executed.
 template <class String_type>
@@ -135,8 +129,7 @@ private:
 //! @}
 
 using namespace UiLib;
-
-const std::wstring Core::app_name_(L"FORIOU_CORE_APP");
+using namespace App_config;
 
 //! do nothing meaningful.
 Core::Core(HINSTANCE hinst)
@@ -144,7 +137,7 @@ Core::Core(HINSTANCE hinst)
 {
     std::locale::global(std::locale(""));
     std::set_terminate(Error::terminate_handler);
-    init_log(Config::log_file);
+    init_log(WcsToMbs(Path::log_file));
 }
 
 //! \brief  init the application.
@@ -157,7 +150,7 @@ bool Core::init_app()
 
     do_log(this, trace, "Init DirectUI");
     CPaintManagerUI::SetInstance(this->app_handle());
-    CPaintManagerUI::SetResourcePath(CPaintManagerUI::GetInstancePath() + "\\UIRes");
+    CPaintManagerUI::SetResourcePath(CPaintManagerUI::GetInstancePath() + Path::ui_resource);
 
     do_log(this, trace, "Init Gdiplus and COM");
     GdiplusStartupInput gdiplusStartupInput;
@@ -170,7 +163,7 @@ bool Core::init_app()
 
     do_log(this, trace, "Create core window");
     win_ = CreateWindowEx(WS_EX_TOOLWINDOW,
-                          app_name_.c_str(),
+                          Path::app_window_class,
                           nullptr,
                           WS_POPUP | WS_DISABLED,
                           CW_USEDEFAULT,
@@ -192,7 +185,7 @@ bool Core::init_app()
         tray_.reset(new Tray_icon(::LoadIcon(NULL, IDI_WINLOGO)));
         tray_->set_action(new Tray_action(this));
 
-        shell_.reset(new Shell("Resource/shell.config"));
+        shell_.reset(new Shell(WcsToMbs(Path::shell_config)));
         shell_->register_action(new Shell_action(this));
 
         register_menus_();
@@ -256,7 +249,8 @@ Core::~Core()
 
 void Core::load_plugin_(const std::wstring& plugin)
 {
-    if (mgr_.load_plugin(plugin) == 0) {
+    auto plugin_path = Path::plugin + plugin;
+    if (mgr_.load_plugin(plugin_path) == 0) {
         auto pname = WcsToMbs(plugin);
         auto error_info = "Cannot load plugin " + pname;
         throw std::runtime_error(error_info);
@@ -265,7 +259,7 @@ void Core::load_plugin_(const std::wstring& plugin)
 
 bool Core::has_another_app_()
 {
-    return ::FindWindow(app_name_.c_str(), nullptr) != NULL;
+    return ::FindWindow(Path::app_window_class, nullptr) != NULL;
 }
 
 void Core::register_app_()
@@ -274,7 +268,7 @@ void Core::register_app_()
 
     wndclass.lpfnWndProc   = event_router;
     wndclass.hInstance     = hinst_;
-    wndclass.lpszClassName = app_name_.c_str();
+    wndclass.lpszClassName = Path::app_window_class;
 
     ::RegisterClass(&wndclass);
 }
@@ -282,7 +276,7 @@ void Core::register_app_()
 void Core::unregister_app_()
 {
     // ignore the result
-    ::UnregisterClass(app_name_.c_str(), hinst_);
+    ::UnregisterClass(Path::app_window_class, hinst_);
 }
 
 void Core::register_menus_()
@@ -399,7 +393,7 @@ Message Core::send_msg(const Message& msg)
 
     switch (msg.type()) {
     case on_notify:
-        ::MessageBox(NULL, msg.info().c_str(), L"Foriou", MB_OK);
+        ::MessageBox(NULL, msg.info().c_str(), Path::app_name, MB_OK);
         break;
 
     default:

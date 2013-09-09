@@ -116,6 +116,9 @@
 		<Unit filename="../Util/Win_base.h">
 			<Option virtualFolder="Util/" />
 		</Unit>
+		<Unit filename="App_config.h">
+			<Option virtualFolder="Core/" />
+		</Unit>
 		<Unit filename="Common_def.h">
 			<Option virtualFolder="Core/" />
 		</Unit>

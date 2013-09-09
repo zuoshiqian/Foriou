@@ -58,7 +58,6 @@ private:
 
 private:
     // app related
-    static const std::wstring app_name_;
     bool has_another_app_();
     void register_app_();
     void unregister_app_();

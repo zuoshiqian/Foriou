@@ -8,7 +8,7 @@
 		<Option virtualFolders="Plugin\;Imp\;Util\;" />
 		<Build>
 			<Target title="Debug">
-				<Option output="C:/Users/Zhiep/Documents/GitHub/Foriou/App/Debug/Exe/Task_launcher" prefix_auto="1" extension_auto="1" />
+				<Option output="C:/Users/Zhiep/Documents/GitHub/Foriou/App/Debug/Exe/Plugin/Task_launcher" prefix_auto="1" extension_auto="1" />
 				<Option object_output="C:/Users/Zhiep/Documents/GitHub/Foriou/App/Debug/Obj/" />
 				<Option type="3" />
 				<Option compiler="msvc10" />
@@ -26,7 +26,7 @@
 				</ExtraCommands>
 			</Target>
 			<Target title="Release">
-				<Option output="C:/Users/Zhiep/Documents/GitHub/Foriou/App/Release/Exe/Task_launcher" prefix_auto="1" extension_auto="1" />
+				<Option output="C:/Users/Zhiep/Documents/GitHub/Foriou/App/Release/Exe/Plugin/Task_launcher" prefix_auto="1" extension_auto="1" />
 				<Option object_output="C:/Users/Zhiep/Documents/GitHub/Foriou/App/Release/Obj/" />
 				<Option type="3" />
 				<Option compiler="msvc10" />
@@ -67,6 +67,9 @@
 			<Add library="comctl32" />
 			<Add directory="$(#psdk.lib)" />
 		</Linker>
+		<Unit filename="../Core/App_config.h">
+			<Option virtualFolder="Imp/" />
+		</Unit>
 		<Unit filename="../Core/IPlugin.h">
 			<Option virtualFolder="Plugin/" />
 		</Unit>

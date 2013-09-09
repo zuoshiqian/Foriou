@@ -65,7 +65,7 @@ void Plugin_manager::unload_all()
 }
 
 Plugin_id Plugin_manager::load_plugin(const std::wstring& plugin)
-try {
+{
     Plugin_module loader(plugin, app_);
     IPlugin* plugin = loader.module_obj();
     if (plugin->load()) {
@@ -75,11 +75,7 @@ try {
         assert(plugins_.size() == modules_.size());
         return plugins_.size();
     }
-    else {
-        return 0;
-    }
-}
-catch (std::exception&) {
+
     return 0;
 }
 

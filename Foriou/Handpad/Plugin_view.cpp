@@ -1,3 +1,4 @@
+#include "Core/App_config.h"
 #include "Handpad/Plugin_view.h"
 #include "Handpad/Handpad.h"
 #include <boost/log/trivial.hpp>
@@ -21,9 +22,11 @@ inline std::wstring generate_note_name()
 
 }  // of namespace unnamed
 
+using namespace App_config;
+
 Plugin_view::Plugin_view(Logger logger)
     : Win_base(logger),
-      pad_(L"Notes"),
+      pad_(Path::data_resource + std::wstring(L"Notes/")),
       list_(),
       title_(),
       content_(),

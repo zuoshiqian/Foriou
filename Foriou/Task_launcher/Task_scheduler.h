@@ -183,6 +183,7 @@ public:
     typedef std::vector<Task>::const_iterator const_iterator;
 
 public:
+    static Task_scheduler* create(const std::wstring& data_file);
     static Task_scheduler* get();
 
     ~Task_scheduler();
@@ -221,7 +222,7 @@ public:
     std::size_t size() const { return tasks_.size(); }
 
 private:
-    Task_scheduler();
+    Task_scheduler(const std::wstring& data_file);
 
     /*! synchronize with the underlying mechanism. */
     void synchronize_sys_();

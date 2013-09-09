@@ -32,7 +32,7 @@ Handpad::Handpad(const std::wstring& folder)
 {
     if (!Fs::exists(dir_)) {
         boost::system::error_code ec;
-        if (!Fs::create_directory(dir_, ec) && ec) {
+        if (!Fs::create_directories(dir_, ec) && ec) {
             throw std::invalid_argument(ec.message());
         }
     }

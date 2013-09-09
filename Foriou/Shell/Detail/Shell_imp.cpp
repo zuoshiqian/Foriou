@@ -613,6 +613,23 @@ void Shell_imp::register_action(IShell_action* action)
     action_.reset(action);
 }
 
+//---------------------------------------------------------------
+boost::optional<std::wstring>
+    Shell_imp::require_input(const std::wstring& prompt, Timeout_second timeout)
+{
+    return boost::none;
+}
+
+void Shell_imp::notify_user(const std::wstring& info, Timeout_second timeout)
+{
+}
+
+boost::optional<bool>
+    Shell_imp::query_user(const std::wstring& question, Timeout_second timeout)
+{
+    return boost::none;
+}
+
 }}  // of namespace Foriou::Detail
 
 //--------------------------------------------------------
