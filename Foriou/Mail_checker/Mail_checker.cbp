@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Mail_checker" />
+		<Option pch_mode="2" />
+		<Option compiler="msvc10" />
+		<Option virtualFolders="Plugin\;Imp\;Util\;" />
+		<Build>
+			<Target title="Debug">
+				<Option output="C:/Users/Zhiep/Documents/GitHub/Innovation/App/Debug/Exe/Mail_checker" prefix_auto="1" extension_auto="1" />
+				<Option object_output="C:/Users/Zhiep/Documents/GitHub/Innovation/App/Debug/Obj/" />
+				<Option type="3" />
+				<Option compiler="msvc10" />
+				<Compiler>
+					<Add option="/W3" />
+					<Add option="/MTd" />
+					<Add option="/DBUILD_DLL" />
+					<Add option="/D_DEBUG" />
+				</Compiler>
+				<Linker>
+					<Add option="/INCREMENTAL:NO" />
+					<Add library="C:\Users\Zhiep\Documents\GitHub\Innovation\Foriou\DirectUI\Project\Common\Static_Debug_2012\UiLib_d.lib" />
+				</Linker>
+				<ExtraCommands>
+					<Add after='mt.exe /nologo /manifest &quot;C:\Users\Zhiep\Documents\GitHub\Innovation\App\Debug\Exe\Mail_checker.dll.manifest&quot; /outputresource:&quot;C:\Users\Zhiep\Documents\GitHub\Innovation\App\Debug\Exe\Mail_checker.dll&quot;;2' />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release">
+				<Option output="C:/Users/Zhiep/Documents/GitHub/Innovation/App/Release/Exe/Mail_checker" prefix_auto="1" extension_auto="1" />
+				<Option object_output="C:/Users/Zhiep/Documents/GitHub/Innovation/App/Release/Obj/" />
+				<Option type="3" />
+				<Option compiler="msvc10" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="/MD" />
+					<Add option="/Ox" />
+					<Add option="/W3" />
+					<Add option="/DBUILD_DLL" />
+					<Add option="/DNDEBUG" />
+				</Compiler>
+				<Linker>
+					<Add option="/INCREMENTAL:NO" />
+					<Add library="user32" />
+					<Add library="C:\Users\Zhiep\Documents\GitHub\Innovation\Foriou\DirectUI\Project\UiLib\UiLib.lib" />
+				</Linker>
+				<ExtraCommands>
+					<Add after='mt.exe /nologo /manifest &quot;C:\Users\Zhiep\Documents\GitHub\Innovation\App\Release\Exe\Mail_checker.dll.manifest&quot; /outputresource:&quot;C:\Users\Zhiep\Documents\GitHub\Innovation\App\Release\Exe\Mail_checker.dll&quot;;2' />
+				</ExtraCommands>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="/W3" />
+			<Add option="/DUNICODE" />
+			<Add option="/D_UNICODE" />
+			<Add option="/D_WIN32" />
+			<Add option="/DWIN32" />
+			<Add option="/DWINDOWS" />
+			<Add option="/D_WINDOWS" />
+			<Add option="/DFY_PLUGIN_EXPORTS" />
+			<Add option="/DWIN32_LEAN_AND_MEAN" />
+			<Add directory="$(#psdk.include)" />
+			<Add directory="C:/Users/Zhiep/Documents/GitHub/Innovation/Foriou/" />
+		</Compiler>
+		<Linker>
+			<Add library="gdi32" />
+			<Add library="user32" />
+			<Add library="kernel32" />
+			<Add library="comctl32" />
+			<Add directory="$(#psdk.lib)" />
+		</Linker>
+		<Unit filename="../Core/IPlugin.h">
+			<Option virtualFolder="Plugin/" />
+		</Unit>
+		<Unit filename="../Util/Utility.cpp">
+			<Option virtualFolder="Util/" />
+		</Unit>
+		<Unit filename="../Util/Utility.h">
+			<Option virtualFolder="Util/" />
+		</Unit>
+		<Unit filename="../Util/Win_base.cpp">
+			<Option virtualFolder="Util/" />
+		</Unit>
+		<Unit filename="../Util/Win_base.h">
+			<Option virtualFolder="Util/" />
+		</Unit>
+		<Unit filename="Mail_checker.cpp">
+			<Option virtualFolder="Imp/" />
+		</Unit>
+		<Unit filename="Mail_checker.h">
+			<Option virtualFolder="Imp/" />
+		</Unit>
+		<Unit filename="Plugin_app.cpp">
+			<Option virtualFolder="Imp/" />
+		</Unit>
+		<Unit filename="Plugin_app.h">
+			<Option virtualFolder="Imp/" />
+		</Unit>
+		<Unit filename="Plugin_view.cpp">
+			<Option virtualFolder="Imp/" />
+		</Unit>
+		<Unit filename="Plugin_view.h">
+			<Option virtualFolder="Imp/" />
+		</Unit>
+		<Unit filename="Pop3.cpp">
+			<Option virtualFolder="Imp/" />
+		</Unit>
+		<Unit filename="Pop3.h">
+			<Option virtualFolder="Imp/" />
+		</Unit>
+		<Unit filename="Pop_option.h">
+			<Option virtualFolder="Imp/" />
+		</Unit>
+		<Unit filename="Push_option.h">
+			<Option virtualFolder="Imp/" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

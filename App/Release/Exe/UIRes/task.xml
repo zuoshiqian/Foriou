@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="600, 480" caption="0, 0, 0, 40" bktrans="true" roundcorner="10, 10">
+    <!-- Resource definition -->
+    <Font name="微软雅黑,雅黑,宋体" size="12" />
+    <Font name="微软雅黑,雅黑,宋体" size="12" bold="true" />
+    <Font name="微软雅黑,雅黑,宋体" size="22" bold="true" />
+    <Font name="微软雅黑,雅黑,宋体" size="26" bold="true" />
+
+    <Default name="Button" value="textcolor=&quot;#000000&quot; hottextcolor=&quot;#FFFFFF&quot; focusedtextcolor=&quot;#000000&quot; pushedtextcolor=&quot;#77a8de&quot; normalimage=&quot;file='Button/btn.png' corner='5,11,5,11' source='0,0,96,24'&quot; hotimage=&quot;file='Button/btn.png' corner='5,11,5,11' source='0,24,96,48'&quot; pushedimage=&quot;file='Button/btn.png' corner='5,11,5,11' source='0,48,96,72'&quot; disabledimage=&quot;file='Button/btn.png' corner='5,11,5,11' source='0,72,96,96'&quot;" />
+    <Default name="FadeButton" value="textcolor=&quot;#000000&quot; hottextcolor=&quot;#FFFFFF&quot; focusedtextcolor=&quot;#000000&quot; pushedtextcolor=&quot;#77a8de&quot; normalimage=&quot;file='Button/btn.png' corner='5,11,5,11' source='0,0,96,24'&quot; hotimage=&quot;file='Button/btn.png' corner='5,11,5,11' source='0,24,96,48'&quot; pushedimage=&quot;file='Button/btn.png' corner='5,11,5,11' source='0,48,96,72'&quot; disabledimage=&quot;file='Button/btn.png' corner='5,11,5,11' source='0,72,96,96'&quot;" />
+	
+	<!-- Effect Styles -->
+    <EffectsStyles>
+        <EffectsStyle name="effect_close" value="anim='zoom+' offset='80'"></EffectsStyle>
+    </EffectsStyles>
+	
+	<Styles stylename="style_def" default="true">
+		<Style stylename="main_win" borderround="5, 5"/>
+	
+		<!-- Header -->
+        <Style stylename="header" height="30" bordersize="2" 
+			   inset="5, 5, 5, 5"
+			   bkimage="file='WndFrame/WndFrameBK.png' source='4,4,10,44' xtiled='true'"/>
+	    <Style stylename="sys_menu" 
+               width="26" maxheight="20" 
+               hotimage="file='WndFrame/sys_btn_menu.png' source='26,0,52,17'" 
+               normalimage="file='WndFrame/sys_btn_menu.png' source='0,0,26,17'" 
+               pushedimage="file='WndFrame/sys_btn_menu.png' source='52,0,78,17'"
+			   tooltip="customize the application"/>
+	    <Style stylename="sys_min" 
+               width="26" maxheight="20" 
+               hotimage="file='WndFrame/sys_btn_min.png' source='26,0,52,17'" 
+               normalimage="file='WndFrame/sys_btn_min.png' source='0,0,26,17'" 
+               pushedimage="file='WndFrame/sys_btn_min.png' source='52,0,78,17'"
+			   tooltip="minimize the window"/>
+		<Style stylename="sys_close" hotimage="file='WndFrame/sys_btn_close.png' source='45,0,90,17'"
+               normalimage="file='WndFrame/sys_btn_close.png' source='0,0,45,17'"
+               pushedimage="file='WndFrame/sys_btn_close.png' source='90,0,135,17'"
+               animeffects="true" mouseineffects="effect_close" pos="0,0, 40, 40"
+               width="26" maxheight="20" 
+			   tooltip="close the window"/>
+			   
+		<Style stylename="footer" height="40"/>
+		<Style stylename="task_property" childpadding="10"/>
+	</Styles>
+	
+	<VerticalLayout style="main_win">
+		<HorizontalLayout style="header">
+			<Control></Control>
+			<Button style="sys_menu" name="sys_menu"/>
+			<Button style="sys_min" name="sys_min"/>
+			<Button style="sys_close" name="sys_close"/>
+		</HorizontalLayout>
+		<HorizontalLayout style="content"  bkcolor="#FF313C00">
+			<List name="win_list" vscrollbar="true" bkcolor="#FFFFFFFF" 
+              inset="0,0,0,0" itemshowhtml="true" 
+              itemalign="center" itembkcolor="#FFE2DDDF" itemaltbk="true" 
+              headerbkimage="file='List/list_header_bg.png'">
+				<ListHeader height="24">
+					<ListHeaderItem text="Task" font="1" 
+                                hotimage="file='List/list_header_hot.png'" 
+                                pushedimage="file='List/list_header_pushed.png'" 
+                                />
+					<!--ListHeaderItem text="Description" font="1" 
+                                hotimage="file='List/list_header_hot.png'" 
+                                pushedimage="file='List/list_header_pushed.png'" 
+                                sepimage="file='List/list_header_sep.png'" sepwidth="2"/-->
+				</ListHeader>
+			</List>
+			<VerticalLayout name="detail" style="task_property">
+				<HorizontalLayout height="40">
+					<Label name="name" text="Name" width="80"/>
+					<Edit name="name_content" enabled="false"/>
+				</HorizontalLayout>
+				<HorizontalLayout height="40">
+					<Label name="time" text="Time" width="80"/>
+					<Edit name="time_content" enabled="false"/>
+					<Combo name="freq" enabled="false" normalimage="file='Control/Combo_nor.bmp' corner='2,2,24,2'" hotimage="file='Control/Combo_over.bmp' corner='2,2,24,2'" pushedimage="file='Control/Combo_over.bmp' corner='2,2,24,2'" textpadding="1,1,1,1">
+						<ListLabelElement selected="true" name="once" text="once"/>
+						<ListLabelElement name="daily" text="daily"/>
+						<ListLabelElement name="weekly" text="weekly"/>
+						<ListLabelElement name="monthly" text="monthly"/>
+					</Combo>
+				</HorizontalLayout>
+				<HorizontalLayout height="40">
+					<Label name="action" text="Action" width="80"/>
+					<Edit name="action_content" enabled="false"/>
+					<Button name="select_exe" text="F" enabled="false"
+					tooltip="Click this to select an exe" maxwidth="40"/>
+				</HorizontalLayout>
+				<VerticalLayout>
+					<Label name="brief" text="Description"/>
+					<RichEdit name="brief_content" vscrollbar="true" autovscroll="true"/>
+				</VerticalLayout>
+			</VerticalLayout>
+		</HorizontalLayout>
+		<HorizontalLayout name="footer" style="footer">
+			<FadeButton text="New" name="new"/>
+			<FadeButton text="Del" name="del"/>
+			<FadeButton text="Start" name="start"/>
+		</HorizontalLayout>
+		<HorizontalLayout name="footer2" style="footer" visible="false">
+			<FadeButton text="Create" name="create"/>
+			<FadeButton text="Quit" name="quit"/>
+		</HorizontalLayout>
+	</VerticalLayout>
+</Window>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="Foriou">
+		<Project filename="Core/Core.cbp">
+			<Depends filename="Task_launcher/Task_launcher.cbp" />
+			<Depends filename="Handpad/Handpad.cbp" />
+			<Depends filename="Win_top/Win_top.cbp" />
+			<Depends filename="VDesk/VDesk.cbp" />
+			<Depends filename="Mail_checker/Mail_checker.cbp" />
+		</Project>
+		<Project filename="Task_launcher/Task_launcher.cbp" />
+		<Project filename="Handpad/Handpad.cbp" />
+		<Project filename="Win_top/Win_top.cbp" />
+		<Project filename="VDesk/VDesk.cbp" />
+		<Project filename="Mail_checker/Mail_checker.cbp" />
+	</Workspace>
+</CodeBlocks_workspace_file>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Define the layout of the window of plugin Simpad -->
+<Window size="640, 480" roundcorner="5,5" bktrans="true" caption="0, 0, 0, 40">
+    <!-- \todo  Move all the configuration definition to a common config file! -->
+
+    <!-- Resource definition -->
+    <Font name="微软雅黑,雅黑,宋体" size="12" />
+    <Font name="微软雅黑,雅黑,宋体" size="12" bold="true" />
+    <Font name="微软雅黑,雅黑,宋体" size="22" bold="true" />
+    <Font name="微软雅黑,雅黑,宋体" size="26" bold="true" />
+
+    <Default name="Button" value="textcolor=&quot;#000000&quot; hottextcolor=&quot;#FFFFFF&quot; focusedtextcolor=&quot;#000000&quot; pushedtextcolor=&quot;#77a8de&quot; normalimage=&quot;file='Button/btn.png' corner='5,11,5,11' source='0,0,96,24'&quot; hotimage=&quot;file='Button/btn.png' corner='5,11,5,11' source='0,24,96,48'&quot; pushedimage=&quot;file='Button/btn.png' corner='5,11,5,11' source='0,48,96,72'&quot; disabledimage=&quot;file='Button/btn.png' corner='5,11,5,11' source='0,72,96,96'&quot;" />
+    <Default name="FadeButton" value="textcolor=&quot;#000000&quot; hottextcolor=&quot;#FFFFFF&quot; focusedtextcolor=&quot;#000000&quot; pushedtextcolor=&quot;#77a8de&quot; normalimage=&quot;file='Button/btn.png' corner='5,11,5,11' source='0,0,96,24'&quot; hotimage=&quot;file='Button/btn.png' corner='5,11,5,11' source='0,24,96,48'&quot; pushedimage=&quot;file='Button/btn.png' corner='5,11,5,11' source='0,48,96,72'&quot; disabledimage=&quot;file='Button/btn.png' corner='5,11,5,11' source='0,72,96,96'&quot;" />
+
+    <!-- Effect Styles -->
+    <EffectsStyles>
+        <EffectsStyle name="effect_close" value="anim='zoom+' offset='80'"></EffectsStyle>
+    </EffectsStyles>
+
+    <!-- Define styles -->
+    <Styles name="style_def" default="true">
+        <!-- main_win -->
+        <Style stylename="main_win" bkcolor="#FFFFFFFF"
+                   colorhsl="true"></Style>
+        
+        <!-- side_bar -->
+        <Style stylename="navigator" bkcolor="0xff00ff00" width="200"></Style>
+        <Style stylename="nav_header" height="60" bordersize="2" bkcolor="0x009f9f9f00" inset="5, 2, 5, 2"></Style>
+        <Style stylename="count" text="N Notes Now" minwidth="140" align="center" padding="0, 15, 0, 5" font="2"></Style>
+        <Style stylename="add" tooltip="add a new note" pos="0, 0, 30, 30" padding="15, 10, 0, 5"></Style>
+        <Style stylename="note_list" bordersize="2" vscrollbar="true" bkcolor="#FFFFFFFF"
+              inset="0,0,0,0" itemshowhtml="true"
+              itemalign="center" itembkcolor="#FFE2DDDF" itemaltbk="true"
+              hscrollbar="false"
+              headerbkimage="file='List/list_header_bg.png'"></Style>
+        <Style stylename="nav_footer" height="60" bordersize="2"></Style>
+        
+        <!-- browser -->
+        <Style stylename="browser"></Style>
+        <Style stylename="header" height="40" bordersize="2" inset="5, 5, 5, 5" childpadding="5, 0, 0, 0"></Style>
+        <Style stylename="delete" pos="0,0, 40, 40" tooltip="delete the current note"></Style>
+		<Style stylename="save" pos="0,0, 40, 40" tooltip="save the current note"></Style>
+        <Style stylename="close" hotimage="file='WndFrame/sys_btn_close.png' source='45,0,90,17'"
+               normalimage="file='WndFrame/sys_btn_close.png' source='0,0,45,17'"
+               pushedimage="file='WndFrame/sys_btn_close.png' source='90,0,135,17'"
+               animeffects="true" mouseineffects="effect_close" pos="0,0, 40, 40"
+               tooltip="close the window"></Style>
+        <Style stylename="caption" height="40"  bkcolor="0x88008800" bordersize="2"></Style>
+        <Style stylename="title" padding="5, 15, 0, 5"></Style>
+        <Style stylename="date" align="center" padding="10, 15, 0, 5"></Style>
+        <Style stylename="content" bkcolor="0x000000" bordervisible="true" vscrollbar="true" autovscroll="true"
+               inset="20, 5, 5, 5" font="1"></Style>
+    </Styles>
+
+    <!-- The main layout -->
+    <HorizontalLayout style="main_win">
+        <VerticalLayout style="navigator">
+            <HorizontalLayout style="nav_header">
+                <!--Text name="count" style="count"></Text-->
+				<Button name="add" style="add" text="ADD"></Button>
+            </HorizontalLayout>
+            <List name="note_list" style="note_list">
+                <ListHeader>
+					<ListHeaderItem text="Note list" font="1" 
+						hotimage="file='List/list_header_hot.png'" 
+						pushedimage="file='List/list_header_pushed.png'" 
+						/>
+                </ListHeader>
+            </List>
+            <HorizontalLayout name="nav_footer">
+                <Button name="setting" style="setting" enabled="false" text="SETTING"></Button>
+            </HorizontalLayout>
+        </VerticalLayout>
+        <VerticalLayout style="browser">
+            <HorizontalLayout style="header">
+                <Control width="300"></Control>
+				<Button name="save" text="save" stylename="save"/>
+                <Button name="delete" style="delete" text="DELETE"></Button>
+                <Button name="close_win" style="close"></Button>
+            </HorizontalLayout>
+            <HorizontalLayout style="caption">
+                <Edit name="title" style="title" font="1"/>
+                <!--Control width="320"></Control>
+                <Text name="date"  style="date" text="DATE" font="1"></Text-->
+            </HorizontalLayout>
+            <Container name="content_box" bkcolor="0xffff000">
+                <RichEdit name="content" style="content"></RichEdit>
+            </Container>
+        </VerticalLayout>
+    </HorizontalLayout>
+</Window>

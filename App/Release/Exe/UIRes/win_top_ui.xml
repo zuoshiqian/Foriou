@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Define the layout of the window of plugin Win_top -->
+<Window size="200, 100" roundcorner="3,3" bktrans="true" caption="0, 0, 0, 100">
+    <!-- \todo  Move all the configuration definition to a common config file! -->
+    
+    <!-- Resource definition -->
+    <Font name="微软雅黑,雅黑,宋体" size="12" />
+    <Font name="微软雅黑,雅黑,宋体" size="12" bold="true" />
+    <Font name="微软雅黑,雅黑,宋体" size="22" bold="true" />
+    <Font name="微软雅黑,雅黑,宋体" size="26" bold="true" />
+
+    <Default name="Button" value="textcolor=&quot;#000000&quot; hottextcolor=&quot;#FFFFFF&quot; focusedtextcolor=&quot;#000000&quot; pushedtextcolor=&quot;#77a8de&quot; normalimage=&quot;file='Button/btn.png' corner='5,11,5,11' source='0,0,96,24'&quot; hotimage=&quot;file='Button/btn.png' corner='5,11,5,11' source='0,24,96,48'&quot; pushedimage=&quot;file='Button/btn.png' corner='5,11,5,11' source='0,48,96,72'&quot; disabledimage=&quot;file='Button/btn.png' corner='5,11,5,11' source='0,72,96,96'&quot;" />
+    <Default name="FadeButton" value="textcolor=&quot;#000000&quot; hottextcolor=&quot;#FFFFFF&quot; focusedtextcolor=&quot;#000000&quot; pushedtextcolor=&quot;#77a8de&quot; normalimage=&quot;file='Button/btn.png' corner='5,11,5,11' source='0,0,96,24'&quot; hotimage=&quot;file='Button/btn.png' corner='5,11,5,11' source='0,24,96,48'&quot; pushedimage=&quot;file='Button/btn.png' corner='5,11,5,11' source='0,48,96,72'&quot; disabledimage=&quot;file='Button/btn.png' corner='5,11,5,11' source='0,72,96,96'&quot;" />
+
+    <!-- Effect Styles -->
+    <EffectsStyles>
+        <EffectsStyle name="effect_close" value="anim='zoom+' offset='80'"></EffectsStyle>
+    </EffectsStyles>
+    
+    <!-- Define styles -->
+    <Styles name="style_def" default="true">
+        <!-- Main win -->
+        <Style stylename="main_win" bkcolor="#FFFFFFFF"
+               bkimage="file='WndFrame/WndFrameBK.png' corner='6,96,6,2'"
+               colorhsl="true"></Style>
+        
+        <!-- Body padding="5, 2, 0, 2"-->
+        <Style stylename="body" width="160" inset="2, 0, 0, 0"></Style>
+        <Style stylename="info_screen" height="65" padding="5, 5, 5, 0" inset="0, 0, 10, 10" bkcolor="0xff00ff00"
+               endellipsis="true" align="center" textpadding="0, 5, 0, 0"></Style>
+        <Style stylename="action_panel" padding="5, 2, 5, 0"></Style>
+        <Style stylename="action_btn"></Style>
+        
+        <!-- Sidebar -->
+        <Style stylename="sidebar" inset="5, 25, 0, 0"></Style>
+        <Style stylename="close_win" hotimage="file='WndFrame/sys_btn_close.png' source='45,0,90,17'"
+               normalimage="file='WndFrame/sys_btn_close.png' source='0,0,45,17'"
+               pushedimage="file='WndFrame/sys_btn_close.png' source='90,0,135,17'"
+               animeffects="true" mouseineffects="effect_close"></Style>
+        <Style stylename="pin_win" text="U" tooltip="The window is not pinned."></Style>
+		<Style stylename="track_win" text="J" tooltip="Track window."></Style>
+    </Styles>
+    <!-- The main layout -->    
+    <HorizontalLayout style="main_win">
+        <VerticalLayout style="body">
+            <Text name="info_screen" style="info_screen"></Text>
+            <HorizontalLayout style="action_panel">
+                <FadeButton name="pin" text="pin" style="action_btn"></FadeButton>
+                <FadeButton name="unpin" text="unpin" style="action_btn"></FadeButton>
+            </HorizontalLayout>
+        </VerticalLayout>
+        <VerticalLayout style="sidebar">
+            <Button name="close_win" style="close_win"></Button>
+            <Button name="pin_win" style="pin_win"></Button>
+			<!--Button name="track" style="track_win"></Button-->
+        </VerticalLayout>
+    </HorizontalLayout>
+</Window>

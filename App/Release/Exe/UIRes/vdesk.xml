@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Define the layout of the window of plugin Win_top -->
+<Window size="400, 300" roundcorner="3,3" bktrans="true" caption="0, 0, 0, 40">
+    <!-- \todo  Move all the configuration definition to a common config file! -->
+    
+    <!-- Resource definition -->
+    <Font name="微软雅黑,雅黑,宋体" size="12" />
+    <Font name="微软雅黑,雅黑,宋体" size="12" bold="true" />
+    <Font name="微软雅黑,雅黑,宋体" size="22" bold="true" />
+    <Font name="微软雅黑,雅黑,宋体" size="26" bold="true" />
+
+    <Default name="Button" value="textcolor=&quot;#000000&quot; hottextcolor=&quot;#FFFFFF&quot; focusedtextcolor=&quot;#000000&quot; pushedtextcolor=&quot;#77a8de&quot; normalimage=&quot;file='Button/btn.png' corner='5,11,5,11' source='0,0,96,24'&quot; hotimage=&quot;file='Button/btn.png' corner='5,11,5,11' source='0,24,96,48'&quot; pushedimage=&quot;file='Button/btn.png' corner='5,11,5,11' source='0,48,96,72'&quot; disabledimage=&quot;file='Button/btn.png' corner='5,11,5,11' source='0,72,96,96'&quot;" />
+    <Default name="FadeButton" value="textcolor=&quot;#000000&quot; hottextcolor=&quot;#FFFFFF&quot; focusedtextcolor=&quot;#000000&quot; pushedtextcolor=&quot;#77a8de&quot; normalimage=&quot;file='Button/btn.png' corner='5,11,5,11' source='0,0,96,24'&quot; hotimage=&quot;file='Button/btn.png' corner='5,11,5,11' source='0,24,96,48'&quot; pushedimage=&quot;file='Button/btn.png' corner='5,11,5,11' source='0,48,96,72'&quot; disabledimage=&quot;file='Button/btn.png' corner='5,11,5,11' source='0,72,96,96'&quot;" />
+
+    <!-- Effect Styles -->
+    <EffectsStyles>
+        <EffectsStyle name="effect_close" value="anim='zoom+' offset='80'"></EffectsStyle>
+    </EffectsStyles>
+    
+    <!-- Define styles -->
+    <Styles name="style_def" default="true">
+        <!-- Main win -->
+		<Style stylename="main_win" borderround="5, 5"/>
+	
+		<!-- Header -->
+        <Style stylename="header" height="40" bordersize="2" 
+			   inset="5, 5, 5, 5"
+			   bkimage="file='WndFrame/WndFrameBK.png' source='4,4,10,44' xtiled='true'"/>
+	    <Style stylename="sys_menu" 
+               width="26" maxheight="20" 
+               hotimage="file='WndFrame/sys_btn_menu.png' source='26,0,52,17'" 
+               normalimage="file='WndFrame/sys_btn_menu.png' source='0,0,26,17'" 
+               pushedimage="file='WndFrame/sys_btn_menu.png' source='52,0,78,17'"
+			   tooltip="customize the application"/>
+	    <Style stylename="sys_min" 
+               width="26" maxheight="20" 
+               hotimage="file='WndFrame/sys_btn_min.png' source='26,0,52,17'" 
+               normalimage="file='WndFrame/sys_btn_min.png' source='0,0,26,17'" 
+               pushedimage="file='WndFrame/sys_btn_min.png' source='52,0,78,17'"
+			   tooltip="minimize the window"/>
+		<Style stylename="sys_close" hotimage="file='WndFrame/sys_btn_close.png' source='45,0,90,17'"
+               normalimage="file='WndFrame/sys_btn_close.png' source='0,0,45,17'"
+               pushedimage="file='WndFrame/sys_btn_close.png' source='90,0,135,17'"
+               animeffects="true" mouseineffects="effect_close" pos="0,0, 40, 40"
+               width="26" maxheight="20" 
+			   tooltip="close the window"/>
+		<Style stylename="desktop" minheight="128"/>
+    </Styles>
+    <!-- The main layout -->    
+<VerticalLayout style="main_win">
+		<HorizontalLayout style="header">
+			<Control></Control>
+			<Button style="sys_close" name="close_win"/>
+		</HorizontalLayout>
+		<VerticalLayout style="content"  height="360" bkcolor="#FF313C00">
+			<TileLayout name="tile" columns="2">
+				<FadeButton style="desktop" name="vdesk1" text="Desktop 1 selected" 
+				tooltip="Press Ctrl + F1 to switch to this"/>
+				<FadeButton style="desktop" name="vdesk2" text="Desktop 2"
+				tooltip="Press Ctrl + F2 to switch to this"/>
+				<FadeButton style="desktop" name="vdesk3" text="Desktop 3"
+				tooltip="Press Ctrl + F3 to switch to this"/>
+				<FadeButton style="desktop" name="vdesk4" text="Desktop 4"
+				tooltip="Press Ctrl + F4 to switch to this"/>
+			</TileLayout>
+		</VerticalLayout>
+	</VerticalLayout>
+</Window>
